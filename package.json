@@ -1,6 +1,6 @@
 {
   "name": "@fehujs/helpers",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Fehujs utilitaries",
   "main": "build/index.js",
   "type": "module",
@@ -31,11 +31,13 @@
     "url": "https://github.com/fehujs/helpers/issues"
   },
   "homepage": "https://github.com/fehujs/helpers#readme",
-  "dependencies": {
+  "devDependencies": {
     "@fehujs/build": "^0.1.1",
     "@fehujs/tsconfig": "^1.0.0",
-    "@paralleldrive/cuid2": "^2.2.2",
     "@types/node": "^22.10.2",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2"  
+  },
+  "dependencies": {
+    "@paralleldrive/cuid2": "^2.2.2"
   }
 }
