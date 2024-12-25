@@ -1,6 +1,6 @@
 {
   "name": "@fehujs/helpers",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Fehujs utilitaries",
   "main": "build/index.js",
   "type": "module",
@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/fehujs/helpers#readme",
   "devDependencies": {
-    "@fehujs/build": "^0.1.1",
+    "@fehujs/build": "^0.2.0",
     "@fehujs/tsconfig": "^1.0.0",
     "@types/node": "^22.10.2",
     "typescript": "^5.7.2"  
