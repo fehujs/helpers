@@ -9,9 +9,9 @@
  * @param raw 
  * @returns 
  */
-export function parseBase(delimiter1: string, delimiter2: string, raw: string): {[key: string]: string} {
+export function parseBase(delimiter1: string, delimiter2: string, raw: string): Record<string, string> {
     let datas = raw.split(delimiter1)
-    let output: {[key: string]: string} = {}
+    let output: Record<string, string> = {}
     
     for(const data of datas) {
         let i = data.split(delimiter2)
@@ -33,7 +33,7 @@ export function parseBase(delimiter1: string, delimiter2: string, raw: string): 
  * @param raw 
  * @returns 
  */
-export function parseCookieData(raw: string | undefined): {[key: string]: string} {
+export function parseCookieData(raw: string | undefined): Record<string, string> {
     if (raw === undefined) return {}
     
     return parseBase("; ", "=", raw)

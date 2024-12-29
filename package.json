@@ -1,6 +1,6 @@
 {
   "name": "@fehujs/helpers",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Fehujs utilitaries",
   "main": "build/index.js",
   "type": "module",

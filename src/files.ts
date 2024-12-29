@@ -10,7 +10,7 @@ export async function getFileFromTmp(filename: string) {
     return await getFile(`./tmp/uploads/${filename}`)
 }
 
-export async function getFileFormat(filename: string) {
+export async function getFileFormat(filename: string): Promise<string> {
     const supportedContentTypes = JSON.parse(await readFile("./src/content-types.json", "utf8"))
 
     const ext = filename.split('.')[filename.split('.').length-1]
@@ -18,7 +18,7 @@ export async function getFileFormat(filename: string) {
     return supportedContentTypes[ext.toLowerCase()] ?? "text/plain"
 }
 
-export async function fileExists(filename: string) {
+export async function fileExists(filename: string): Promise<boolean> {
     try {
         await getFile(filename)
         return true
@@ -36,7 +36,7 @@ export async function fileExists(filename: string) {
 export async function move(
     filepath: string,
     newPath: string,
-    options: { overwrite: false } = { overwrite: false }
+    options: { overwrite: boolean } = { overwrite: false }
 ) {
     const filename = filepath.split(/[\\\/]/).slice(-1)[0]
     newPath += "/"
